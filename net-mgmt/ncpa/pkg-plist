@@ -1,0 +1,104 @@
+ncpa/filename.py
+@rmtry ncpa/filename.pyc
+ncpa/ncpadaemon.py
+@rmtry ncpa/ncpadaemon.pyc
+ncpa/ncpa_listener.py
+ncpa/ncpa_passive.py
+@sample %%ETCDIR%%/ncpa.cfg.sample
+@sample %%ETCDIR%%/ncpa.cfg.d/example.cfg
+ncpa/etc/ncpa.cfg.d/README.txt
+ncpa/listener/__init__.py
+@rmtry ncpa/listener/__init__.pyc
+ncpa/listener/certificate.py
+@rmtry ncpa/listener/certificate.pyc
+ncpa/listener/database.py
+@rmtry ncpa/listener/database.pyc
+ncpa/listener/environment.py
+@rmtry ncpa/listener/environment.pyc
+ncpa/listener/nodes.py
+@rmtry ncpa/listener/nodes.pyc
+ncpa/listener/pluginnodes.py
+@rmtry ncpa/listener/pluginnodes.pyc
+ncpa/listener/processes.py
+@rmtry ncpa/listener/processes.pyc
+ncpa/listener/psapi.py
+@rmtry ncpa/listener/psapi.pyc
+ncpa/listener/server.py
+@rmtry ncpa/listener/server.pyc
+ncpa/listener/services.py
+@rmtry ncpa/listener/services.pyc
+ncpa/listener/static/css/bootstrap.min.css
+ncpa/listener/static/css/ea.min.css
+ncpa/listener/static/css/font-awesome.min.css
+ncpa/listener/static/css/ncpa-graph.css
+ncpa/listener/static/css/ncpa.css
+ncpa/listener/static/css/sumoselect.css
+ncpa/listener/static/fonts/FontAwesome.otf
+ncpa/listener/static/fonts/fontawesome-webfont.eot
+ncpa/listener/static/fonts/fontawesome-webfont.svg
+ncpa/listener/static/fonts/fontawesome-webfont.ttf
+ncpa/listener/static/fonts/fontawesome-webfont.woff
+ncpa/listener/static/fonts/fontawesome-webfont.woff2
+ncpa/listener/static/help/active.html
+ncpa/listener/static/help/api.html
+ncpa/listener/static/help/configuration.html
+ncpa/listener/static/help/graphs.html
+ncpa/listener/static/help/index.html
+ncpa/listener/static/help/other.html
+ncpa/listener/static/help/passive.html
+ncpa/listener/static/img/critical.png
+ncpa/listener/static/img/footer_lodyas.png
+ncpa/listener/static/img/glyphicons-halflings-white.png
+ncpa/listener/static/img/glyphicons-halflings.png
+ncpa/listener/static/img/ncpa.png
+ncpa/listener/static/img/shattered.png
+ncpa/listener/static/img/warning.png
+ncpa/listener/static/js/bootstrap.min.js
+ncpa/listener/static/js/d3.v5.min.js
+ncpa/listener/static/js/help.js
+ncpa/listener/static/js/jquery.3.5.1.min.js
+ncpa/listener/static/js/jquery.ea.1.3.5.min.js
+ncpa/listener/static/js/jquery.ss.3.0.2.min.js
+ncpa/listener/static/js/main.js
+ncpa/listener/static/js/smoothie.js
+ncpa/listener/templates/admin/checks.html
+ncpa/listener/templates/admin/global.html
+ncpa/listener/templates/admin/index.html
+ncpa/listener/templates/admin/listener.html
+ncpa/listener/templates/admin/login.html
+ncpa/listener/templates/admin/nrdp.html
+ncpa/listener/templates/admin/passive.html
+ncpa/listener/templates/admin/plugins.html
+ncpa/listener/templates/base.html
+ncpa/listener/templates/errors/404.html
+ncpa/listener/templates/errors/500.html
+ncpa/listener/templates/graph.html
+ncpa/listener/templates/gui/api.html
+ncpa/listener/templates/gui/checks.html
+ncpa/listener/templates/gui/dashboard.html
+ncpa/listener/templates/gui/graphs.html
+ncpa/listener/templates/gui/help.html
+ncpa/listener/templates/gui/plugins.html
+ncpa/listener/templates/gui/stats.html
+ncpa/listener/templates/gui/tail.html
+ncpa/listener/templates/gui/top.html
+ncpa/listener/templates/login.html
+ncpa/listener/templates/tail.html
+ncpa/listener/templates/top.html
+ncpa/passive/__init__.py
+@rmtry ncpa/passive/__init__.pyc
+ncpa/passive/kafkaproducer.py
+@rmtry ncpa/passive/kafkaproducer.pyc
+ncpa/passive/nagioshandler.py
+@rmtry ncpa/passive/nagioshandler.pyc
+ncpa/passive/ncpacheck.py
+@rmtry ncpa/passive/ncpacheck.pyc
+ncpa/passive/nrdp.py
+@rmtry ncpa/passive/nrdp.pyc
+ncpa/passive/nrds.py
+@rmtry ncpa/passive/nrds.pyc
+ncpa/passive/utils.py
+@rmtry ncpa/passive/utils.pyc
+@dir(nagios,nagios,775) ncpa/var
+@dir(nagios,nagios,775) ncpa/var/log
+@dir(nagios,nagios,775) ncpa/var/run

@@ -1,0 +1,47 @@
+#!/bin/sh
+
+# $FreeBSD: $
+#
+# PROVIDE: ncpa_passive
+# REQUIRE: LOGIN
+# KEYWORD: shutdown
+#
+# Add the following lines to /etc/rc.conf to enable ncpa:
+# ncpa_passive_enable (bool):	Set to "NO" by default.
+#				Set it to "YES" to enable ncpa.
+# ncpa_passive_flags (str):	Not set by default.
+
+. /etc/rc.subr
+
+name=ncpa_passive
+rcvar=ncpa_passive_enable
+
+load_rc_config "${name}"
+
+: ${ncpa_enable:=NO}
+: ${ncpa_configfile:=%%NCPADIR%%/etc/ncpa.cfg}
+
+required_files="${ncpa_configfile}"
+
+ncpa_passive_command="%%NCPADIR%%/ncpa_passive.py"
+ncpa_passive_pidfile="%%NCPADIR%%/var/run/ncpa_passive.pid"
+start_cmd="${name}_start"
+status_cmd="${name}_status"
+stop_cmd="${name}_stop"
+extra_commands="status"
+
+ncpa_passive_start() {
+	${ncpa_passive_command} --start
+}
+
+ncpa_passive_status() {
+	if [ -n "$(check_pidfile "${ncpa_passive_pidfile}" "${ncpa_passive_command}")" ]; then
+		${ncpa_passive_command} --status
+	fi
+}
+
+ncpa_passive_stop() {
+	${ncpa_passive_command} --stop
+}
+
+run_rc_command "$1"

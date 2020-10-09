@@ -1,0 +1,12 @@
+[
+{ type: install
+  message: <<EOM
+ Enable NCPA in /etc/rc.conf with the following line:
+
+   ncpa_enable="YES"
+
+ A sample configuration is available in %%ETCDIR%%/ncpa.cfg.sample.
+ Copy to ncpa.cfg and edit to suit your needs.
+EOM
+}
+]

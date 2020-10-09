@@ -1,0 +1,47 @@
+#!/bin/sh
+
+# $FreeBSD: $
+#
+# PROVIDE: ncpa_listener
+# REQUIRE: LOGIN
+# KEYWORD: shutdown
+#
+# Add the following lines to /etc/rc.conf to enable ncpa:
+# ncpa_listener_enable (bool):	Set to "NO" by default.
+#				Set it to "YES" to enable ncpa.
+# ncpa_listener_flags (str):	Not set by default.
+
+. /etc/rc.subr
+
+name=ncpa_listener
+rcvar=ncpa_listener_enable
+
+load_rc_config "${name}"
+
+: ${ncpa_enable:=NO}
+: ${ncpa_configfile:=%%NCPADIR%%/etc/ncpa.cfg}
+
+required_files="${ncpa_configfile}"
+
+ncpa_listener_command="%%NCPADIR%%/ncpa_listener.py"
+ncpa_listener_pidfile="%%NCPADIR%%/var/run/ncpa_listener.pid"
+start_cmd="${name}_start"
+status_cmd="${name}_status"
+stop_cmd="${name}_stop"
+extra_commands="status"
+
+ncpa_listener_start() {
+	${ncpa_listener_command} --start
+}
+
+ncpa_listener_status() {
+	if [ -n "$(check_pidfile "${ncpa_listener_pidfile}" "${ncpa_listener_command}")" ]; then
+		${ncpa_listener_command} --status
+	fi
+}
+
+ncpa_listener_stop() {
+	${ncpa_listener_command} --stop
+}
+
+run_rc_command "$1"
